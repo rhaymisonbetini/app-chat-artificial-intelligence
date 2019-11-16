@@ -6,22 +6,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding color="secondary">
-  <ion-grid   class="padding-base">
-    <ion-row *ngFor="let message of messages">
+<ion-content padding color="bark" id="bodyy" > 
+  <ion-grid   class="padding-base" >
+    <ion-row *ngFor="let message of messages  | async">
       <ion-col size="2">
-        <img src="../../assets/capitu.png" *ngIf="message.user == current" class="capitu">
+        <img src="../../assets/capitu.png" *ngIf="message.sentBy == current" class="capitu">
       </ion-col>
-      <ion-col size="9" *ngIf="message.user == current" class="message other-message">
-        <b>{{ message.user}}</b><br>
-        <span>{{ message.msg}}</span>
+      <ion-col size="9" *ngIf="message.sentBy == current" class="message other-message">
+        <b>{{ message.sentBy}}</b><br>
+        <span>{{ message.content}}</span>
         <div class="time" text-right><br>
           {{message.createdAt | date:'short'}}
         </div>
       </ion-col>
-      <ion-col size="9" offset="3" *ngIf="message.user !== current" class="message my-message">
-        <b>{{ message.user}}</b><br>
-        <span>{{ message.msg}}</span>
+      <ion-col size="9" offset="3" *ngIf="message.sentBy !== current" class="message my-message">
+        <b>Convidado</b><br>
+        <span>{{ message.content}}</span>
         <div class="time" text-right><br>
           {{message.createdAt | date:'short'}}
         </div>
