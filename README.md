@@ -6,7 +6,7 @@
 </div>
 
 
-O aplicativo constitui um chat com uma inteligência artificial da google pré-configurada. Algumas perguntas básicas foram adicionadas de forma que
+O aplicativo é baseado em um chat em tempo real com uma inteligência artificial da google pré-configurada. Algumas perguntas básicas foram adicionadas de forma que
 a aplicação encontra-se em desenvolvimento.
 
 # Instalação
